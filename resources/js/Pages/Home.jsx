@@ -9,8 +9,8 @@ const Home = (props) => {
     
     return (
         <div>
-            <Link href={route("register")}>登録</Link>
-            <Link href={route('logout')} method="post" as="button">Log Out</Link>
+            { !user && <Link href={route("register")}>登録</Link> }
+            { auth.user ? <Link href={route('logout')} method="post" >Log Out</Link> : <Link href={route("login")}>Log In</Link> }
             
             <section>
                 <h1>プロフィール</h1>
