@@ -1,11 +1,21 @@
 import React from "react";
+import { Link } from "@inertiajs/inertia-react";
 import Works from "../Components/Works";
 
-const Home = () => {
+
+const Home = (props) => {
+    const { auth } = props;
+    const { user } = props;
+    
     return (
         <div>
+            <Link href={route("register")}>登録</Link>
+            <Link href={route('logout')} method="post" as="button">Log Out</Link>
+            
             <section>
                 <h1>プロフィール</h1>
+                
+                { user && user.image && <div style={{width:"100px"}}><img style={{width:"100%", objectFit:"cover"}} src={user.image}/></div> }
                 
                 <h2>森野刀磨 -Morino Toma-</h2>
                 

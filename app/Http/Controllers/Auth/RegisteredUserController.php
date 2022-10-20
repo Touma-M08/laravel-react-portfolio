@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
+use Storage;
 
 class RegisteredUserController extends Controller
 {
@@ -38,13 +39,27 @@ class RegisteredUserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'image' => 'image',
         ]);
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        
+        if (!empty($request->image)) {
+            $image = $request->image;
+        // バケットの`profile`フォルダへアップロード
+            $path = Storage::disk('s3')->putFile('profile', $image, 'public');
+            
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'image' => Storage::disk('s3')->url($path),
+            ]);
+        }else{
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+        }
 
         event(new Registered($user));
 

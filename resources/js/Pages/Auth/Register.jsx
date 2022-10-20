@@ -12,6 +12,7 @@ export default function Register() {
         email: '',
         password: '',
         password_confirmation: '',
+        image: '',
     });
 
     useEffect(() => {
@@ -97,6 +98,19 @@ export default function Register() {
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />
+                </div>
+                
+                <div className="mt-4">
+                    <InputLabel forInput="image" value="Image" />
+
+                    <TextInput
+                        type="file"
+                        name="image"
+                        className="mt-1 block w-full"
+                        handleChange={(e) => setData('image', e.target.files[0])}
+                    />
+
+                    <InputError message={errors.image} className="mt-2" />
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
