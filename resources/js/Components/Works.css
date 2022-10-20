@@ -1,0 +1,19 @@
+li {
+    list-style: none;
+}
+
+.work {
+    text-align: center;
+    width: 500px;
+    border: 1px solid #333;
+}
+
+.work-img-box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.work-img {
+    width: 100%;
+    object-fit: cover
+}
