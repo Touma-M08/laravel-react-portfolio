@@ -25,7 +25,7 @@ class HomeController extends Controller
         $image = $request->image;
         // バケットの`profile`フォルダへアップロード
         $path = Storage::disk('s3')->putFile('profile', $image, 'public');
-        
+        // S3から古い画像削除
         Storage::disk('s3')->delete(Auth::user()->image);
         Auth::user()->image = $path;
         Auth::user()->save();
