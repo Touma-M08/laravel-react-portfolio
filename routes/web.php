@@ -18,11 +18,8 @@ use App\Http\Controllers\WorkController;
 */
 
 Route::get('/', [HomeController::class, "index"])->name("home");
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('works/{work}', [WorkController::class, "show"])->name("show");
+Route::get('/edit', [HomeController::class, "edit"])->name("edit");
+Route::post('/', [HomeController::class, "update"])->name("update");
 
 require __DIR__.'/auth.php';
-
-Route::get('works/{work}', [WorkController::class, "show"])->name("show");
