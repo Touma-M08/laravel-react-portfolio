@@ -51,7 +51,7 @@ class RegisteredUserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-                'image' => Storage::disk('s3')->url($path),
+                'image' => $path,
             ]);
         }else{
             $user = User::create([

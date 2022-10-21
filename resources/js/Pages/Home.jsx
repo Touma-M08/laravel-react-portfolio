@@ -10,12 +10,13 @@ const Home = (props) => {
     return (
         <div>
             { !user && <Link href={route("register")}>登録</Link> }
-            { auth.user ? <Link href={route('logout')} method="post" >Log Out</Link> : <Link href={route("login")}>Log In</Link> }
+            { auth.user ? <Link href={route('logout')} method="post">Log Out</Link> : <Link href={route("login")}>Log In</Link> }
             
             <section>
                 <h1>プロフィール</h1>
                 
-                { user && user.image && <div style={{width:"100px"}}><img style={{width:"100%", objectFit:"cover"}} src={user.image}/></div> }
+                { user && user.image && <div style={{width:"100px"}}><img style={{width:"100%", objectFit:"cover"}} src={`https://portfolio-prof-img.s3.ap-northeast-1.amazonaws.com/${user.image}`}/></div> }
+                { auth.user && <Link href={route("edit")}>変更</Link> }
                 
                 <h2>森野刀磨 -Morino Toma-</h2>
                 
