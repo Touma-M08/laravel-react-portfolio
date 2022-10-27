@@ -1,0 +1,214 @@
+li {
+    list-style: none;
+}
+
+.container {
+    background-color: rgb(240, 240, 240);
+}
+
+.main-visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.mainvisual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-ttl {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.loginout {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav ul li {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 50px;
+  transition: all 0.2s ease;
+}
+
+.header nav ul li:hover {
+    color: rgb(190, 190, 190);
+}
+
+.header nav ul li + li{
+    margin-left: 40px;
+}
+
+.wrap {
+    padding: 50px 20px;
+    box-sizing: border-box;
+    width: 1030px;
+    margin: 0 auto;
+}
+
+.content-ttl {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.content-ttl::before {
+    font-size: 1.3rem;
+    color: rgb(250, 85, 85);
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-ttl.__profile::before {
+    content: "PROFILE";
+}
+
+.content-ttl.__works::before {
+    content: "WORKS";
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prof-img-box {
+    width: 350px;
+}
+
+.prof-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.prof-content {
+    margin-left: 10%;
+}
+
+.skill-content {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+}
+
+.skill-item {
+    text-align: center;
+}
+
+.skill-item + .skill-item {
+    margin-left: 10px;
+}
+
+.icon {
+    font-size: 3.5rem;
+}
+
+.icon.__php {
+    font-size: 4rem;
+}
+
+.js-pos {
+    margin-top: 6px;
+}
+
+.icon.__js {
+    font-size: 3rem;
+}
+
+.icon.__aws {
+    font-size: 4rem;
+}
+
+.github {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.icon.__github {
+    font-size: 3rem;
+}
+
+.works {
+    background-color: #fff;
+}
+
+.works ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.work {
+    text-align: center;
+    width: 450px;
+}
+
+.work:nth-of-type(2n) {
+    margin-left: 20px;
+}
+
+.work-link {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.work-link:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 8px #333;
+}
+
+.work-img-box {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-ttl {
+    color: #020E7E;
+    margin-top: 15px;
+}
+
