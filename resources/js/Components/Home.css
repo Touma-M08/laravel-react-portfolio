@@ -65,7 +65,7 @@ li {
 .wrap {
     padding: 50px 20px;
     box-sizing: border-box;
-    width: 1030px;
+    width: 1035px;
     margin: 0 auto;
 }
 
@@ -208,7 +208,7 @@ li {
 }
 
 .work-ttl {
-    color: #020E7E;
+    color: #000;
     margin-top: 15px;
 }
 
