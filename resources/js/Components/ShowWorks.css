@@ -1,5 +1,5 @@
 .bg:nth-of-type(2n+1) {
-    background-color: rgb(240, 240, 240);
+    background-color: rgba(2,13,129, 0.1);
 }
 
 .work-wrap {
@@ -7,6 +7,29 @@
     box-sizing: border-box;
     max-width: 1300px;
     margin: 0 auto;
+}
+
+.arrow-left {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+}
+
+.arrow-left::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-left: 4px solid #000;
+    border-bottom: 4px solid #000;
+    background-color: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 11px;
+    left: 14px;
 }
 
 .work-about {
