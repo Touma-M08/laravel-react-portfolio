@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        
 
         <!-- Scripts -->
         @routes

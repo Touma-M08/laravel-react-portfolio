@@ -11,7 +11,7 @@ const ShowGathery = () => {
         <div>
             <div className="bg">
                 <div className="work-wrap">
-                    <Link href={route("home")}>戻る</Link>
+                    <Link href={route("home")} className="arrow-left"></Link>
                     <h1 className="work-ttl">Gathery</h1>
                     <h2 className="work-about">おなじ場所へ出かけたい人同士をつなげる</h2>
                     <h3>
